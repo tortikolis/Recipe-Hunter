@@ -1,10 +1,19 @@
 import React from "react";
-import PropTypes from "prop-types";
+import "./header.css";
 
-const Header = props => {
-  return <div />;
-};
-
-Header.propTypes = {};
+const Header = () => (
+  <header className="header">
+    <div className="header-wrap container">
+      <div className="logo">LOGO</div>
+      <nav className="nav-bar">
+        <ul className="nav-list">
+          <li className="nav-item">Home</li>
+          <li className="nav-item">My Recipes</li>
+          <li className="nav-item">Favourites</li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+);
 
 export default Header;
