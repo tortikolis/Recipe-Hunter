@@ -1,0 +1,2 @@
+export const SHOW_SEARCH_FORM = "SHOW_SEARCH_FORM";
+export const CHOOSE_DIET = "CHOOSE_DIET";

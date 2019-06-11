@@ -3,7 +3,7 @@ import "./App.css";
 
 import Header from "./components/Header/Header";
 import Panel from "./components/Panel/Panel";
-import SearchForm from "./components/SearchForm/SerchForm";
+import SearchForm from "./components/SearchForm/SearchForm";
 
 const App = () => (
   <Fragment>
