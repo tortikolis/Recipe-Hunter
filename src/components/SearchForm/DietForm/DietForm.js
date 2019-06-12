@@ -9,8 +9,6 @@ const DietForm = props => {
     <div className="diet-form-wrap">
       <h5>Choose Your Diet:</h5>
       <DietSelect onSelect={props.onSelect} dietList={dietList} />
-      <br />
-      <button className="btn btn-success">NEXT</button>
     </div>
   );
 };

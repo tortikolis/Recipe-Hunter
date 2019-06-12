@@ -1,0 +1,20 @@
+.category-list {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0 0 50px;
+}
+
+.ingredients-form-wrap {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.category {
+  margin-right: 20px;
+}
+
+.ing-title {
+  text-align: center;
+}
