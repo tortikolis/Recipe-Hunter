@@ -2,13 +2,17 @@ import {
   SHOW_SEARCH_FORM,
   CHOOSE_DIET,
   ADD_INGREDIENT,
-  REMOVE_INGREDIENT
+  REMOVE_INGREDIENT,
+  SET_MIN_CALORIES,
+  SET_MAX_CALORIES
 } from "../actions/types";
 
 const initState = {
   isSearchFormActive: false,
   selectedDiet: "",
-  selectedIngredients: []
+  selectedIngredients: [],
+  minCalories: "",
+  maxCalories: ""
 };
 
 export default (state = initState, action) => {
@@ -34,6 +38,16 @@ export default (state = initState, action) => {
         selectedIngredients: state.selectedIngredients.filter(
           ingredient => ingredient !== action.ingredient
         )
+      };
+    case SET_MIN_CALORIES:
+      return {
+        ...state,
+        minCalories: action.calories
+      };
+    case SET_MAX_CALORIES:
+      return {
+        ...state,
+        maxCalories: action.calories
       };
     default:
       return state;

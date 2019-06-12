@@ -2,7 +2,9 @@ import {
   SHOW_SEARCH_FORM,
   CHOOSE_DIET,
   ADD_INGREDIENT,
-  REMOVE_INGREDIENT
+  REMOVE_INGREDIENT,
+  SET_MIN_CALORIES,
+  SET_MAX_CALORIES
 } from "./types";
 
 export const showSearchForm = () => {
@@ -30,5 +32,19 @@ export const removeIngredient = ingredient => {
   return {
     type: REMOVE_INGREDIENT,
     ingredient
+  };
+};
+
+export const setMinCalories = calories => {
+  return {
+    type: SET_MIN_CALORIES,
+    calories
+  };
+};
+
+export const setMaxCalories = calories => {
+  return {
+    type: SET_MAX_CALORIES,
+    calories
   };
 };
