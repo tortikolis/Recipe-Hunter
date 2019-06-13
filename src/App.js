@@ -10,6 +10,7 @@ const App = () => (
     <Header />
     <Panel />
     <SearchForm />
+    <div id="edamam-badge" data-color="white" />
   </Fragment>
 );
 
