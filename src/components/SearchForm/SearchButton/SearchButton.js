@@ -10,6 +10,8 @@ const SearchButton = props => {
   );
 };
 
-SearchButton.propTypes = {};
+SearchButton.propTypes = {
+  getRecepies: PropTypes.func.isRequired
+};
 
 export default SearchButton;

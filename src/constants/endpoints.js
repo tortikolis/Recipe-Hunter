@@ -1,1 +1,1 @@
-export const RECEPIES_URL = "https://api.edamam.com/search";
+export const RECIPES_URL = "https://api.edamam.com/search";

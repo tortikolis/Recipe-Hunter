@@ -1,32 +1,32 @@
 import {
-  SET_RECEPIES,
-  SET_RECEPIES_ERR,
+  SET_RECIPES,
+  SET_RECIPES_ERR,
   SET_LOADING,
-  CLEAR_RECEPIES_ERR
+  CLEAR_RECIPES_ERR
 } from "../actions/types";
 
 const initialState = {
-  recepieResults: null,
-  recepieErr: "",
+  recipeResults: null,
+  recipeErr: "",
   isLoading: false
 };
 
-const recepieReducer = (state = initialState, action) => {
+const recipeReducer = (state = initialState, action) => {
   switch (action.type) {
-    case SET_RECEPIES:
+    case SET_RECIPES:
       return {
         ...state,
-        recepieResults: action.recepies
+        recipeResults: action.recipes
       };
-    case SET_RECEPIES_ERR:
+    case SET_RECIPES_ERR:
       return {
         ...state,
-        recepieErr: `Ooops something went wrong... ${action.err}`
+        recipeErr: `Ooops something went wrong... ${action.err}`
       };
-    case CLEAR_RECEPIES_ERR:
+    case CLEAR_RECIPES_ERR:
       return {
         ...state,
-        recepieErr: ""
+        recipeErr: ""
       };
     case SET_LOADING:
       return {
@@ -39,4 +39,4 @@ const recepieReducer = (state = initialState, action) => {
   }
 };
 
-export default recepieReducer;
+export default recipeReducer;

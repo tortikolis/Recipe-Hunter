@@ -7,7 +7,7 @@ import {
   setMinCalories,
   setMaxCalories
 } from "../../store/actions/searchActions";
-import { fetchRecepiesAction } from "../../store/actions/recepiesActions";
+import { fetchRecipesAction } from "../../store/actions/recipesActions";
 import DietForm from "./DietForm/DietForm";
 import IngredientForm from "./IngredientsForm/IngredientsForm";
 import CaloriesForm from "./CaloriesForm/CaloriesForm";
@@ -73,7 +73,7 @@ const mapDispatchToProps = dispatch => {
         : dispatch(setMaxCalories(inputValue));
     },
     setRecepies: (diet, ingredients, minCal, maxCal) =>
-      dispatch(fetchRecepiesAction(diet, ingredients, minCal, maxCal))
+      dispatch(fetchRecipesAction(diet, ingredients, minCal, maxCal))
   };
 };
 
