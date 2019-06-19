@@ -32,6 +32,7 @@ export default class Recipe {
     this.cautions = cautions;
     this.ingredients = ingredients;
     this.calories = calories;
+    this.caloriesPer100 = parseInt((totalWeight / calories) * 100);
     this.totalWeight = totalWeight;
     this.totalTime = totalTime;
     this.totalNutrients = totalNutrients;

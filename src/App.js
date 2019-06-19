@@ -4,13 +4,14 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import Panel from "./components/Panel/Panel";
 import SearchForm from "./components/SearchForm/SearchForm";
+import RecipeResultsList from "./components/RecipeResultsList/RecipeResultsList";
 
 const App = () => (
   <Fragment>
     <Header />
     <Panel />
     <SearchForm />
-    <div id="edamam-badge" data-color="white" />
+    <RecipeResultsList />
   </Fragment>
 );
 

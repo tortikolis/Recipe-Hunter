@@ -48,6 +48,10 @@
   text-transform: uppercase;
 }
 
+.search-category-panel {
+  display: block;
+}
+
 @media (max-width: 400px) {
   .welcome-msg {
     width: 80%;

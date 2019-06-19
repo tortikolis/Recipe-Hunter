@@ -1,3 +1,4 @@
+export const SHRINK_PANEL = "SHRINK_PANEL";
 export const SHOW_SEARCH_FORM = "SHOW_SEARCH_FORM";
 export const CHOOSE_DIET = "CHOOSE_DIET";
 export const ADD_INGREDIENT = "ADD_INGREDIENT";

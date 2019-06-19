@@ -2,7 +2,8 @@ import {
   SET_RECIPES,
   SET_RECIPES_ERR,
   SET_LOADING,
-  CLEAR_RECIPES_ERR
+  CLEAR_RECIPES_ERR,
+  SHOW_SEARCH_FORM
 } from "./types";
 import getRecipes from "../../services/recipes/getRecipes";
 
@@ -33,8 +34,16 @@ const setLoading = isLoading => {
   };
 };
 
+const hideSearchForm = () => {
+  return {
+    type: SHOW_SEARCH_FORM,
+    payload: false
+  };
+};
+
 export const fetchRecipesAction = (diet, ingredients, minCal, maxCal) => {
   return dispatch => {
+    dispatch(hideSearchForm());
     dispatch(setLoading(true));
     getRecipes(diet, ingredients, minCal, maxCal)
       .then(recipes => {

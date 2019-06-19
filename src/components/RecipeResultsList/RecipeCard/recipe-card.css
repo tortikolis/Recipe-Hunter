@@ -1,0 +1,22 @@
+.recipe-card {
+  width: 300px;
+  height: 450px;
+  margin: 20px;
+  padding: 5px;
+  border: 1px solid rgb(211, 210, 210);
+  box-shadow: -4px 7px 31px -13px black;
+  overflow: hidden;
+}
+
+.recipe-image {
+  display: block;
+  width: 100%;
+  height: 50%;
+}
+
+.recipe-title {
+  margin: 10px 5px 20px 5px;
+  text-align: center;
+  color: rgb(78, 76, 76);
+  font-weight: bold;
+}
