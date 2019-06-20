@@ -5,9 +5,10 @@ import {
   CLEAR_RECIPES_ERR,
   SHOW_SEARCH_FORM
 } from "./types";
+import { hideSearchForm } from "./searchActions";
 import getRecipes from "../../services/recipes/getRecipes";
 
-const setRecipes = recipes => {
+export const setRecipes = recipes => {
   return {
     type: SET_RECIPES,
     recipes
@@ -31,13 +32,6 @@ const setLoading = isLoading => {
   return {
     type: SET_LOADING,
     isLoading
-  };
-};
-
-const hideSearchForm = () => {
-  return {
-    type: SHOW_SEARCH_FORM,
-    payload: false
   };
 };
 

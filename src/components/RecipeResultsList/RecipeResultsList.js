@@ -4,6 +4,9 @@ import { connect } from "react-redux";
 
 import Loader from "./Loader/Loader";
 import RecipeCard from "./RecipeCard/RecipeCard";
+import BackButton from "./BackButton/BackButton";
+import { showSearchForm } from "../../store/actions/searchActions";
+import { setRecipes } from "../../store/actions/recipesActions";
 
 import "./recipe-results-list.css";
 
@@ -35,7 +38,8 @@ const RecipeResultsList = props => {
     ) : null;
 
   return (
-    <div>
+    <div className="recipe-list-wrap">
+      <BackButton onClickHandler={props.resetSearch} />
       <Loader isActive={props.isLoading} />
       {RecipeList}
       <div id="edamam-badge" data-color="white" />
@@ -52,7 +56,16 @@ const mapStateToProps = state => {
   };
 };
 
+const mapDispatchToProps = dispatch => {
+  return {
+    resetSearch: () => {
+      dispatch(setRecipes(null));
+      dispatch(showSearchForm());
+    }
+  };
+};
+
 export default connect(
   mapStateToProps,
-  null
+  mapDispatchToProps
 )(RecipeResultsList);

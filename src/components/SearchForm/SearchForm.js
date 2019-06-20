@@ -29,14 +29,21 @@ class SearchForm extends Component {
   };
 
   render() {
+    const {
+      diet,
+      minCalories,
+      maxCalories,
+      selectDiet,
+      setNumberOfCalories
+    } = this.props;
     const form = (
       <div className="search-form-wrap container">
-        <DietForm onSelect={this.props.selectDiet} />
+        <DietForm onSelect={selectDiet} selectedDiet={diet} />
         <IngredientForm />
         <CaloriesForm
-          minCalories={this.props.minCalories}
-          maxCalories={this.props.maxCalories}
-          onInputChange={this.props.setNumberOfCalories}
+          minCalories={minCalories}
+          maxCalories={maxCalories}
+          onInputChange={setNumberOfCalories}
         />
         <SearchButton getRecepies={this.fetchRecepies} />
       </div>

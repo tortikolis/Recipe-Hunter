@@ -7,7 +7,15 @@ import classNames from "classnames";
 
 class Panel extends Component {
   render() {
-    const isPanelShrinked = this.props.isPanelShrinked;
+    const {
+      isPanelShrinked,
+      onStartClick,
+      searchResults,
+      diet,
+      ingredients,
+      minCalories,
+      maxCalories
+    } = this.props;
 
     const panelClassName = classNames({
       "search-open": isPanelShrinked,
@@ -15,20 +23,20 @@ class Panel extends Component {
     });
 
     const startButton = !isPanelShrinked ? (
-      <button onClick={this.props.onStartClick} className="start-serch-btn">
+      <button onClick={onStartClick} className="start-serch-btn">
         Start Search
       </button>
     ) : null;
 
-    const title = this.props.searchResults ? "Search Results" : "Welcome";
-    const paragraph = this.props.searchResults ? (
+    const title = searchResults ? "Search Results" : "Welcome";
+    const paragraph = searchResults ? (
       <Fragment>
-        <span className="search-category-panel">diet: {this.props.diet}</span>
+        <span className="search-category-panel">diet: {diet}</span>
         <span className="search-category-panel">
-          ingredients: {this.props.ingredients}
+          ingredients: {ingredients.join()}
         </span>
         <span className="search-category-panel">
-          calories: {this.props.minCalories} - {this.props.maxCalories}
+          calories: {minCalories} - {maxCalories}
         </span>
       </Fragment>
     ) : (

@@ -8,7 +8,8 @@ const Category = props => {
     return (
       <li key={i}>
         <Checkbox
-          ingredient={ingredient}
+          ingredient={ingredient.name}
+          checked={ingredient.selected}
           onChangeHandler={props.onChangeHandler}
         />
       </li>

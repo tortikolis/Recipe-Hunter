@@ -8,7 +8,11 @@ const DietForm = props => {
   return (
     <div className="diet-form-wrap">
       <h5>Choose Your Diet:</h5>
-      <DietSelect onSelect={props.onSelect} dietList={dietList} />
+      <DietSelect
+        onSelect={props.onSelect}
+        dietList={dietList}
+        selectedDiet={props.selectedDiet}
+      />
     </div>
   );
 };

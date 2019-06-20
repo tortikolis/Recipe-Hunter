@@ -10,7 +10,7 @@ import ingredientsData from "./ingredientsData/ingredientsData";
 import "./ingredients-form.css";
 
 const IngredientsForm = props => {
-  const categoryList = ingredientsData.map((item, i) => {
+  const categoryList = props.ingredients.map((item, i) => {
     return (
       <li className="category" key={i}>
         <Category
@@ -28,6 +28,12 @@ const IngredientsForm = props => {
       <ul className="category-list">{categoryList}</ul>
     </div>
   );
+};
+
+const mapStateToProps = state => {
+  return {
+    ingredients: state.search.ingredients
+  };
 };
 
 const mapDispatchToProps = dispatch => {
@@ -48,6 +54,6 @@ IngredientsForm.propTypes = {
 };
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(IngredientsForm);

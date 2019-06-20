@@ -1,8 +1,8 @@
 import {
   SHOW_SEARCH_FORM,
   CHOOSE_DIET,
-  ADD_INGREDIENT,
-  REMOVE_INGREDIENT,
+  SELECT_INGREDIENT,
+  DESELECT_INGREDIENT,
   SET_MIN_CALORIES,
   SET_MAX_CALORIES
 } from "./types";
@@ -11,6 +11,13 @@ export const showSearchForm = () => {
   return {
     type: SHOW_SEARCH_FORM,
     payload: true
+  };
+};
+
+export const hideSearchForm = () => {
+  return {
+    type: SHOW_SEARCH_FORM,
+    payload: false
   };
 };
 
@@ -23,14 +30,14 @@ export const chooseDiet = diet => {
 
 export const addIngredient = ingredient => {
   return {
-    type: ADD_INGREDIENT,
+    type: SELECT_INGREDIENT,
     ingredient
   };
 };
 
 export const removeIngredient = ingredient => {
   return {
-    type: REMOVE_INGREDIENT,
+    type: DESELECT_INGREDIENT,
     ingredient
   };
 };

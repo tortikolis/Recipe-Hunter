@@ -1,0 +1,21 @@
+.back-button {
+  position: absolute;
+  right: 10%;
+  top: -30px;
+  background-color: rgb(30, 116, 156);
+  border-radius: 5px;
+  padding: 5px;
+  border: none;
+  color: white;
+}
+
+.back-button:hover {
+  transition: 0.3s ease all;
+  transform: translateY(-2px);
+  box-shadow: 0px 3px 20px -5px black;
+}
+
+.back-button:active {
+  transform: translateY(0);
+  box-shadow: 0px 1px 20px -5px black;
+}

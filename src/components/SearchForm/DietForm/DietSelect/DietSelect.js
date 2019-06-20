@@ -11,6 +11,7 @@ const DietSelect = props => {
       onChange={props.onSelect}
       className="form-control"
       id="exampleFormControlSelect1"
+      value={props.selectedDiet}
     >
       {selectOptions}
     </select>
