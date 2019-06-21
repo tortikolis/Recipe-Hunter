@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
@@ -13,33 +13,35 @@ import "./recipe-results-list.css";
 const RecipeResultsList = props => {
   const RecipeList =
     props.recipes !== null ? (
-      <ul className="recipe-list">
-        {props.recipes.map(recipe => {
-          const {
-            label,
-            image,
-            totalTime,
-            caloriesPer100,
-            dietLabels
-          } = recipe;
-          return (
-            <li key={recipe.id}>
-              <RecipeCard
-                title={label}
-                image={image}
-                calories={caloriesPer100}
-                time={totalTime}
-                diet={dietLabels.join()}
-              />
-            </li>
-          );
-        })}
-      </ul>
+      <Fragment>
+        <BackButton onClickHandler={props.resetSearch} />
+        <ul className="recipe-list">
+          {props.recipes.map(recipe => {
+            const {
+              label,
+              image,
+              totalTime,
+              caloriesPer100,
+              dietLabels
+            } = recipe;
+            return (
+              <li key={recipe.id}>
+                <RecipeCard
+                  title={label}
+                  image={image}
+                  calories={caloriesPer100}
+                  time={totalTime}
+                  diet={dietLabels.join()}
+                />
+              </li>
+            );
+          })}
+        </ul>
+      </Fragment>
     ) : null;
 
   return (
     <div className="recipe-list-wrap">
-      <BackButton onClickHandler={props.resetSearch} />
       <Loader isActive={props.isLoading} />
       {RecipeList}
       <div id="edamam-badge" data-color="white" />
