@@ -2,8 +2,7 @@ import {
   SET_RECIPES,
   SET_RECIPES_ERR,
   SET_LOADING,
-  CLEAR_RECIPES_ERR,
-  SHOW_SEARCH_FORM
+  CLEAR_RECIPES_ERR
 } from "./types";
 import { hideSearchForm } from "./searchActions";
 import getRecipes from "../../services/recipes/getRecipes";

@@ -47,7 +47,11 @@ const RecipeResultsList = props => {
   );
 };
 
-RecipeResultsList.propTypes = {};
+RecipeResultsList.propTypes = {
+  recipes: PropTypes.array,
+  isLoading: PropTypes.bool.isRequired,
+  resetSearch: PropTypes.func.isRequired
+};
 
 const mapStateToProps = state => {
   return {

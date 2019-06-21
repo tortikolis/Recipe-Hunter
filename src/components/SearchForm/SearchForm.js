@@ -54,7 +54,13 @@ class SearchForm extends Component {
 }
 
 SearchForm.propTypes = {
-  selectDiet: PropTypes.func.isRequired
+  selectDiet: PropTypes.func,
+  diet: PropTypes.string,
+  ingredients: PropTypes.array,
+  minCalories: PropTypes.string,
+  maxCalories: PropTypes.string,
+  setNumberOfCalories: PropTypes.func.isRequired,
+  setRecepies: PropTypes.func.isRequired
 };
 
 const mapStateToProps = state => {

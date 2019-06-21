@@ -6,7 +6,6 @@ import {
   removeIngredient
 } from "../../../store/actions/searchActions";
 import Category from "./Category/Category";
-import ingredientsData from "./ingredientsData/ingredientsData";
 import "./ingredients-form.css";
 
 const IngredientsForm = props => {
