@@ -12,7 +12,7 @@ import {
   SET_MAX_CALORIES
 } from "../actions/types";
 
-import findAndSelectIngredient from "../../helpers/findAndSelectIngredient";
+import findAndSelectIngredient from "../../utils/findAndSelectIngredient";
 
 const initState = {
   isSearchFormActive: false,

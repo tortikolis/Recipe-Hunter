@@ -1,17 +1,16 @@
 import React, { Fragment } from "react";
 
-export default props => {
-  //console.log(props.checked);
+export default ({ ingredient, checked, onChangeHandler }) => {
   return (
     <Fragment>
       <input
         type="checkbox"
-        name={props.ingredient}
-        value={props.ingredient}
-        onChange={props.onChangeHandler}
-        checked={props.checked}
+        name={ingredient}
+        value={ingredient}
+        onChange={onChangeHandler}
+        checked={checked}
       />
-      {props.ingredient}
+      {ingredient}
     </Fragment>
   );
 };

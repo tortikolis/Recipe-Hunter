@@ -1,17 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const DietSelect = props => {
-  const selectOptions = props.dietList.map((diet, i) => (
+const DietSelect = ({ dietList, onSelect, selectedDiet }) => {
+  const selectOptions = dietList.map((diet, i) => (
     <option key={i}>{diet}</option>
   ));
-
   return (
     <select
-      onChange={props.onSelect}
+      onChange={onSelect}
       className="form-control"
       id="exampleFormControlSelect1"
-      value={props.selectedDiet}
+      value={selectedDiet}
     >
       {selectOptions}
     </select>
@@ -19,8 +18,9 @@ const DietSelect = props => {
 };
 
 DietSelect.propTypes = {
+  dietList: PropTypes.array.isRequired,
   onSelect: PropTypes.func.isRequired,
-  dietList: PropTypes.array.isRequired
+  selectedDiet: PropTypes.string
 };
 
 export default DietSelect;

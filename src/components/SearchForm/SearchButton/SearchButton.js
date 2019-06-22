@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./search-button.css";
 
-const SearchButton = props => {
+const SearchButton = ({ getRecepies }) => {
   return (
-    <button className="search-button" onClick={props.getRecepies}>
+    <button className="search-button" onClick={getRecepies}>
       Search for recepies
     </button>
   );

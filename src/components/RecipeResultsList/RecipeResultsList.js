@@ -10,13 +10,13 @@ import { setRecipes } from "../../store/actions/recipesActions";
 
 import "./recipe-results-list.css";
 
-const RecipeResultsList = props => {
+const RecipeResultsList = ({ recipes, isLoading, resetSearch }) => {
   const RecipeList =
-    props.recipes !== null ? (
+    recipes !== null ? (
       <Fragment>
-        <BackButton onClickHandler={props.resetSearch} />
+        <BackButton onClickHandler={resetSearch} />
         <ul className="recipe-list">
-          {props.recipes.map(recipe => {
+          {recipes.map(recipe => {
             const {
               label,
               image,
@@ -42,7 +42,7 @@ const RecipeResultsList = props => {
 
   return (
     <div className="recipe-list-wrap">
-      <Loader isActive={props.isLoading} />
+      <Loader isActive={isLoading} />
       {RecipeList}
       <div id="edamam-badge" data-color="white" />
     </div>

@@ -4,21 +4,22 @@ import "./diet-form.css";
 import dietList from "./data/dietList";
 import DietSelect from "./DietSelect/DietSelect";
 
-const DietForm = props => {
+const DietForm = ({ onSelect, selectedDiet }) => {
   return (
     <div className="diet-form-wrap">
       <h5>Choose Your Diet:</h5>
       <DietSelect
-        onSelect={props.onSelect}
+        onSelect={onSelect}
         dietList={dietList}
-        selectedDiet={props.selectedDiet}
+        selectedDiet={selectedDiet}
       />
     </div>
   );
 };
 
 DietForm.propTypes = {
-  onSelect: PropTypes.func.isRequired
+  onSelect: PropTypes.func.isRequired,
+  selectedDiet: PropTypes.string
 };
 
 export default DietForm;

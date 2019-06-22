@@ -8,14 +8,14 @@ import {
 import Category from "./Category/Category";
 import "./ingredients-form.css";
 
-const IngredientsForm = props => {
-  const categoryList = props.ingredients.map((item, i) => {
+const IngredientsForm = ({ ingredients, onIngredientCheckChange }) => {
+  const categoryList = ingredients.map((item, i) => {
     return (
       <li className="category" key={i}>
         <Category
           image={item.img}
           ingredients={item.ingredients}
-          onChangeHandler={props.onIngredientCheckChange}
+          onChangeHandler={onIngredientCheckChange}
         />
       </li>
     );

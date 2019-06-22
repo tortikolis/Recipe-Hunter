@@ -2,8 +2,8 @@ import React from "react";
 import "./loader.css";
 import PropTypes from "prop-types";
 
-const Loader = props => {
-  const loader = props.isActive ? (
+const Loader = ({ isActive }) => {
+  const loader = isActive ? (
     <div>
       <h4 className="loader-title">Getting your recipes..</h4>
       <div id="cooking">

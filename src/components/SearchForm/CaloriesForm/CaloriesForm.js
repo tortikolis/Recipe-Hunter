@@ -3,19 +3,19 @@ import PropTypes from "prop-types";
 import CaloriesInput from "./CaloriesInput/CaloriesInput";
 import "./calories-form.css";
 
-const CaloriesForm = props => {
+const CaloriesForm = ({ minCalories, maxCalories, onInputChange }) => {
   return (
     <div className="calories-form">
       <h5>Choose range of calories (per serving):</h5>
       <CaloriesInput
         inputRole="min"
-        value={props.minCalories}
-        onInputChange={props.onInputChange}
+        value={minCalories}
+        onInputChange={onInputChange}
       />
       <CaloriesInput
         inputRole="max"
-        value={props.maxCalories}
-        onInputChange={props.onInputChange}
+        value={maxCalories}
+        onInputChange={onInputChange}
       />
     </div>
   );
@@ -23,7 +23,8 @@ const CaloriesForm = props => {
 
 CaloriesForm.propTypes = {
   minCalories: PropTypes.string,
-  maxCalories: PropTypes.string
+  maxCalories: PropTypes.string,
+  onInputChange: PropTypes.func.isRequired
 };
 
 export default CaloriesForm;

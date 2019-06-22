@@ -24,8 +24,8 @@ class SearchForm extends Component {
       minCalories,
       maxCalories
     } = this.props;
-    const ingredientsStr = ingredients.join();
-    setRecepies(diet, ingredientsStr, minCalories, maxCalories);
+
+    setRecepies(diet, ingredients, minCalories, maxCalories);
   };
 
   render() {
@@ -67,7 +67,7 @@ const mapStateToProps = state => {
   return {
     isActive: state.search.isSearchFormActive,
     diet: state.search.selectedDiet,
-    ingredients: state.search.selectedIngredients,
+    ingredients: state.search.ingredients,
     minCalories: state.search.minCalories,
     maxCalories: state.search.maxCalories
   };

@@ -3,14 +3,14 @@ import PropTypes from "prop-types";
 import Checkbox from "../Checkbox/Checkbox";
 import "./category.css";
 
-const Category = props => {
-  const ingredientsList = props.ingredients.map((ingredient, i) => {
+const Category = ({ ingredients, onChangeHandler, image }) => {
+  const ingredientsList = ingredients.map((ingredient, i) => {
     return (
       <li key={i}>
         <Checkbox
           ingredient={ingredient.name}
           checked={ingredient.selected}
-          onChangeHandler={props.onChangeHandler}
+          onChangeHandler={onChangeHandler}
         />
       </li>
     );
@@ -18,11 +18,7 @@ const Category = props => {
 
   return (
     <Fragment>
-      <img
-        src={props.image}
-        className="ingredient-img"
-        alt={props.ingredients.Category}
-      />
+      <img src={image} className="ingredient-img" alt={ingredients.Category} />
       <ul className="ingredient-list">{ingredientsList}</ul>
     </Fragment>
   );
@@ -30,7 +26,8 @@ const Category = props => {
 
 Category.propTypes = {
   ingredients: PropTypes.array.isRequired,
-  onChangeHandler: PropTypes.func.isRequired
+  onChangeHandler: PropTypes.func.isRequired,
+  image: PropTypes.string
 };
 
 export default Category;
