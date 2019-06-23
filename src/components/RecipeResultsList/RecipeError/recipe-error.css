@@ -1,0 +1,14 @@
+.error-msg-recipes {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 24px;
+  color: rgb(238, 61, 61);
+}
+
+.error-msg-recipes button {
+  border: none;
+  background-color: transparent;
+  text-transform: uppercase;
+  text-decoration: underline;
+  color: rgb(75, 75, 245);
+}

@@ -21,7 +21,7 @@ const recipeReducer = (state = initialState, action) => {
     case SET_RECIPES_ERR:
       return {
         ...state,
-        recipeErr: `Ooops something went wrong... ${action.err}`
+        recipeErr: `Ooops something went wrong...`
       };
     case CLEAR_RECIPES_ERR:
       return {

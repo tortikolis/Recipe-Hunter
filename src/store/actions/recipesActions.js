@@ -21,7 +21,7 @@ const setRecipesErr = err => {
   };
 };
 
-const clearRecipesErr = () => {
+export const clearRecipesErr = () => {
   return {
     type: CLEAR_RECIPES_ERR
   };
