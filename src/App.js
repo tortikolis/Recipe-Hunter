@@ -1,17 +1,20 @@
 import React, { Fragment } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 
 import Header from "./components/Header/Header";
-import Panel from "./components/Panel/Panel";
-import SearchForm from "./components/SearchForm/SearchForm";
-import RecipeResultsList from "./components/RecipeResultsList/RecipeResultsList";
+import SearchAndResults from "./components/SearchAndResults/SearchAndResults";
+import RecipePage from "./components/RecipePage/RecipePage";
 
 const App = () => (
   <Fragment>
-    <Header />
-    <Panel />
-    <SearchForm />
-    <RecipeResultsList />
+    <Router>
+      <Header />
+      <Switch>
+        <Route path="/" exact component={SearchAndResults} />
+        <Route path="/recipe/:id" component={RecipePage} />
+      </Switch>
+    </Router>
   </Fragment>
 );
 

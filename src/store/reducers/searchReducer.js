@@ -58,9 +58,9 @@ const initState = {
         { name: "appricot", selected: false },
         { name: "avocado", selected: false },
         { name: "banana", selected: false },
-        { name: "blueberrie", selected: false },
+        { name: "blueberry", selected: false },
         { name: "cherrie", selected: false },
-        { name: "cucamber", selected: false },
+        { name: "cucumber", selected: false },
         { name: "plum", selected: false },
         { name: "date", selected: false },
         { name: "lemon", selected: false },
@@ -69,8 +69,8 @@ const initState = {
         { name: "tomato", selected: false },
         { name: "nectarine", selected: false },
         { name: "pineapple", selected: false },
-        { name: "raspberries", selected: false },
-        { name: "strawberries", selected: false },
+        { name: "raspberry", selected: false },
+        { name: "strawberry", selected: false },
         { name: "watermelon", selected: false }
       ]
     },

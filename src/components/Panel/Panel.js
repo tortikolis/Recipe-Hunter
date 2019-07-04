@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { showSearchForm } from "../../store/actions/searchActions";
 import { shrinkPanel } from "../../store/actions/UIActions";
 import classNames from "classnames";
+import findSelectedIngredients from "../../utils/findSelectedInredients";
 
 class Panel extends Component {
   render() {
@@ -16,6 +17,7 @@ class Panel extends Component {
       minCalories,
       maxCalories
     } = this.props;
+    const selectedIngredients = findSelectedIngredients(ingredients).join();
 
     const panelClassName = classNames({
       "search-open": isPanelShrinked,
@@ -33,7 +35,7 @@ class Panel extends Component {
       <Fragment>
         <span className="search-category-panel">diet: {diet}</span>
         <span className="search-category-panel">
-          ingredients: {ingredients.join()}
+          ingredients: {selectedIngredients}
         </span>
         <span className="search-category-panel">
           calories: {minCalories} - {maxCalories}
@@ -62,7 +64,7 @@ const mapStateToProps = state => {
     isPanelShrinked: state.UI.isPanelShrinked,
     searchResults: state.recipes.recipeResults,
     diet: state.search.selectedDiet,
-    ingredients: state.search.selectedIngredients,
+    ingredients: state.search.ingredients,
     minCalories: state.search.minCalories,
     maxCalories: state.search.maxCalories
   };

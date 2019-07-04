@@ -25,7 +25,7 @@ const RecipeResultsList = ({
       <Fragment>
         <BackButton onClickHandler={resetSearch} />
         <ul className="recipe-list">
-          {recipes.map(recipe => {
+          {recipes.map((recipe, i) => {
             const {
               label,
               image,
@@ -41,6 +41,7 @@ const RecipeResultsList = ({
                   calories={caloriesPer100}
                   time={totalTime}
                   diet={dietLabels.join()}
+                  id={i}
                 />
               </li>
             );
